@@ -74,7 +74,7 @@ module Guard
       rescue
         [nil, nil]
       ensure
-        File.exist?(formatter_tmp_file) && File.delete(formatter_tmp_file)
+        File.exist?(formatter_tmp_file) # && File.delete(formatter_tmp_file)
       end
 
       def _open_launchy
